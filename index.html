@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TL 01</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <h1 id="accueil"><a href="index.html">Les propriétés <abbr title="Feuilles de style en cascade 3">CSS
+                    3</abbr></a></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#a">A - C</a></li>
+            <li><a href="#d">D - F</a></li>
+            <li><a href="#g">G - I</a></li>
+            <li><a href="#j">J - L</a></li>
+            <li><a href="#m">M - O</a></li>
+            <li><a href="#p">P - R</a></li>
+            <li><a href="#s">S - U</a></li>
+            <li><a href="#v">V - X</a></li>
+            <li><a href="#y">Y - Z</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="a" class="accordeon">
+            <h2 class="lettre" tabindex="0" role="button">A</h2>
+            <div class="corps ferme" aria-expanded="false">
+                <ul>
+                    <li>align-content</li>
+                    <li>align-items</li>
+                    <li>align-self</li>
+                    <li>animation</li>
+                    <li>animation-delay</li>
+                    <li>animation-direction</li>
+                    <li>animation-duration</li>
+                    <li>animation-fill-mode</li>
+                    <li>animation-iteration-count</li>
+                    <li>animation-name</li>
+                    <li>animation-play-state</li>
+                    <li>animation-timing-function</li>
+                </ul>
+            </div>
+        </div>
+        <div id="b" class="accordeon">
+            <h2 class="lettre" tabindex="0" role="button">B</h2>
+            <div class="corps ferme">
+                <h3>Border radius</h3>
+                <p>La propriété border radius permet d'arrondir les côtés d'un élément <abbr
+                        title="HyperText Markup Language">HTML</abbr>. Il est également possible d'arrondir qu'un seul
+                    côté avec les propriétés border-top(ou bottom)-right(ou left)-radius.</p>
+
+                <div class="rectangle-border-exemple">Exemple</div>
+                <pre>
+.rectangle-border-exemple{
+    border-radius: 5px;
+}
+                </pre>
+
+                <p> Il est également possible de faire des cercles avec le border-radius. </p>
+
+                <div class="cercle">
+                </div>
+                <pre>
+.cercle {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(165, 199, 85);
+    margin: 0 50px;
+}
+                    
+                </pre>
+                <h3>Box-shadow</h3>
+                <p>La propriété box-shadow permet de créer une ombrage sur un élément. Il y a de 3 à 5 valeurs possible
+                    pour définir un box-shadow. </p>
+
+                <ul>
+                    <li>Offset-x | offset-y | color</li>
+                    <li>Offset-x | offset-y | blur-radius | color</li>
+                    <li>Offset-x | offset-y | blur-radius | spread-radius | color</li>
+                </ul>
+
+                <div class="rectangle-box-shadow">Exemple</div>
+                <pre>
+.rectangle-box-shadow {
+    box-shadow: 5px 10px 5px #000000;
+    margin-bottom: 20px;
+}
+                </pre>
+                <h3>Background-clip</h3>
+                <p>Propriété qui définit la manière dont l'image ou la couleur
+                    de fond d'une boîte va s'étendre à l'intérieur de celle-ci (soit
+                    s'étendre jusque sous la boîte, jusqu’au padding, jusqu'au contenu ou alors seulement jusqu'au
+                    texte. </p>
+                <ul>
+                    <li>border-box</li>
+                    <li>padding-box</li>
+                    <li>content-box</li>
+                    <li>text</li>
+                </ul>
+
+                <div class="flex">
+                    <div class="background-clip-padding">
+                        Exemple: padding box
+                    </div>
+
+                    <div class="background-clip-content">
+                        Exemple: content box
+                    </div>
+                </div>
+
+                <div class="flex">
+
+                    <pre>
+.background-clip-padding {
+    background-clip: padding-box;
+}
+                    </pre>
+                    <pre>
+.background-clip-content  {
+    background-clip: content-box;
+}
+                    </pre>
+                </div>
+
+
+                <h3>Border-image</h3>
+                <p>Permet d'avoir un image en bordure d'un élément HTML. La
+                    propriété border-image est le raccourcis des différentes
+                    propriétés de border-image:</p>
+                <ul>
+                    <li>border-image-source</li>
+                    <li>border-image-slice</li>
+                    <li>border-image-width</li>
+                    <li>border-image-outset</li>
+                    <li>border-image-repeat</li>
+                </ul>
+                <div class="background-border-img">
+                    Exemple avec une image png de cercle hachuré.
+                </div>
+
+                <pre class="trop-long">
+.background-border-img{
+    height: 100px;
+    width: 100px;
+    padding: 15px;
+    border: 30px solid black;
+    border-image-source: url(/img/—Pngtree—creative\ vector\ dotted\ line\ dotted_6030768.png);
+    border-image-slice: 40%;
+    border-image-repeat: repeat;
+}
+                </pre>
+
+                <h3>Box-sizing</h3>
+                <p>Propriété qui définit si le navigateur va prendre en compte
+                    la bordure et le remplissage (padding) dans la valeur qui est
+                    définie pour la longueur et la largeur d’un élément. Content-box
+                    est la valeur de défaut, la taille total de l’élément est la
+                    somme de la largeur/hauteur définit et des bordures et
+                    remplissages alors que la valeur border-box ne va pas augmenter
+                    la taille de l’élément si on lui rajoute du padding ou une
+                    bordure puisque ces valeurs sont déjà prises en compte par le
+                    navigateur. </p>
+
+                <ul>
+                    <li>content-box (valeur par défaut)</li>
+                    <li>border-box</li>
+                </ul>
+
+                <div class="flex">
+                    <div class="box-sizing">
+                        Exemple avec la propriété content-box.
+                    </div>
+
+                    <div class="box-sizing-2">
+                        Exemple avec la propriété border-box.
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <pre>
+.box-sizing {
+    box-sizing: content-box;
+}
+                    </pre>
+                    <pre>
+.box-sizing-2 {
+    box-sizing: border-box;
+}
+                    </pre>
+
+                </div>
+                <p>Autres propriétés en B:</p>
+                <ul>
+                    <li>backface-visibility</li>
+                    <li>background-size</li>
+                    <li>background-size</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="c" class="accordeon">
+            <h2 class="lettre" tabindex="0" role="button">C</h2>
+            <div class="corps ferme" aria-expanded="false">
+
+                <h3>Column count</h3>
+                <p>La propriété column count permet de déterminer le nombre de colonne à un paragraphe.</p>
+
+                <p class="p-column">Exemple <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
+                    obcaecati. Autem, enim reprehenderit. Neque, obcaecati numquam
+                    officia harum optio aut alias dolore quos corporis amet eaque
+                    voluptatum doloribus nostrum, mollitia voluptates. Impedit
+                    perferendis quas eligendi rem quae in pariatur? Rem, quod corporis
+                    quasi soluta quia neque iusto fugiat minus vero? Nulla accusantium,
+                    quo quam doloremque fuga distinctio repellendus rerum maiores unde
+                    est obcaecati recusandae blanditiis magni! Odio similique minima
+                    accusantium neque, impedit odit, deserunt modi cupiditate aliquid
+                    quas ipsa nesciunt quo, sunt assumenda mollitia obcaecati fugit
+                    harum quidem! Voluptate consectetur officiis nam? Dignissimos, et
+                    quibusdam! Magni, praesentium! Quis aut adipisci eum, eveniet
+                    voluptate cupiditate ipsa odio deserunt, eius beatae eos quod illo?
+                    Nisi ex culpa ipsa accusantium hic est nobis, quidem itaque. Ad,
+                    recusandae nemo non ipsa, fugiat fuga explicabo quos nesciunt,
+                    perspiciatis accusantium sed quis dolor id dicta! Laborum repellat
+                    fugiat commodi nulla tenetur nisi consequatur aperiam sequi, amet
+                    quibusdam cumque culpa, ex minima. Neque, eveniet at! Saepe
+                    doloremque non perspiciatis delectus vero inventore perferendis
+                    exercitationem a sapiente, sit quam accusamus ipsam natus
+                    repellendus quaerat veritatis modi illum ad. Nesciunt doloribus
+                    molestiae rerum perspiciatis provident architecto quidem, impedit
+                    doloremque! Odit possimus hic officiis cupiditate, ea ipsam
+                    reiciendis suscipit nobis.</p>
+
+                <pre>
+.p-column{
+    column-count: 2;
+    background-color: rgb(165, 199, 85);
+    padding: 20px;
+}
+                </pre>
+
+                <h3>Caret-color</h3>
+                <p>Propriété qui permet de changer la couleur du curseur visible lorque l'utilisateur est sur un input.
+                </p>
+
+                <input type="text" placeholder="Exemple">
+                <pre>
+input {
+    caret-color: rgb(228, 7, 7);
+    height: 25px;
+    background-color: rgb(165, 199, 85);
+}
+                </pre>
+
+                <p>Autres propriétés en C:</p>
+                <ul>
+                    <li>column-fill</li>
+                    <li>column-gap</li>
+                    <li>column-rule</li>
+                    <li>column-rule-color</li>
+                    <li>column-rule-style</li>
+                    <li>column-rule-width</li>
+                    <li>column-span</li>
+                    <li>column-width</li>
+                    <li>columns</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="d" class="accordeon">
+            <h2 class="lettre" tabindex="0" role="button">D</h2>
+            <div class="corps ferme" aria-expanded="false">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en D.</p>
+            </div>
+        </div>
+        <div id="e" class="accordeon">
+            <h2 class="lettre" tabindex="0" role="button">E</h2>
+            <div class="corps ferme" aria-expanded="false">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en E.</p>
+            </div>
+        </div>
+        <div id="f" class="accordeon">
+            <h2 class="lettre" tabindex="0" role="button">F</h2>
+            <div class="corps ferme" aria-expanded="false">
+                <h3>Filter</h3>
+                <p>La propriété filter permet d'appliquer un filtre sur un élément.
+                    Il existe plusieurs filtres. Il est possible d'en utiliser plusieurs pour un seul et même élément.
+                </p>
+                <ul>
+                    <li>blur</li>
+                    <li>brightness</li>
+                    <li>contrast</li>
+                    <li>drop-shadow</li>
+                    <li>grayscale</li>
+                    <li>hue-rotate</li>
+                    <li>invert</li>
+                    <li>opacity</li>
+                    <li>saturate</li>
+                    <li>sepia</li>
+                </ul>
+
+                <div class="flex overflow">
+                    <figure>
+                        ­<img src="./img/raoul-droog-yMSecCHsIBc-unsplash.jpg" class="chat-f1" height="150"
+                            alt="Chat gris avec lunette de soleil">
+                        <figcaption>Image de chat avec un filtre grayscale</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./img/raoul-droog-yMSecCHsIBc-unsplash.jpg" class="chat-f2" height="150"
+                            alt="Chat gris avec lunette de soleil">
+                        <figcaption>Image de chat avec un filtre invert</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./img/raoul-droog-yMSecCHsIBc-unsplash.jpg" class="chat-f3" height="150"
+                            alt="Chat gris avec lunette de soleil">
+                        <figcaption>Image de chat avec un filtre brightness</figcaption>
+                    </figure>
+                </div>
+
+                <div class="flex">
+                    <pre>
+.chat-f1{
+    filter: grayscale(100%); 
+}
+                    </pre>
+                    <pre>
+.chat-f2 {
+    filter:invert(100%);
+}
+                    </pre>
+                    <pre>
+.chat-f3{
+    filter:brightness(50%);
+}
+                    </pre>
+                </div>
+                <p>Autres propriétés commençant par F:</p>
+                <ul>
+                    <li>flex</li>
+                    <li>flex-basis</li>
+                    <li>flex-direction</li>
+                    <li>flex-flow</li>
+                    <li>flex-grow</li>
+                    <li>flex-shrink</li>
+                    <li>flex-wrap</li>
+                    <li>font-size-adjust</li>
+                    <li>font-stretch</li>
+                </ul>
+            </div>
+        </div>
+        <div id="g" class="accordeon">
+            <h2 class="lettre" tabindex="0" role="button">G</h2>
+            <div class="corps ferme" aria-expanded="false">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en G.</p>
+            </div>
+        </div>
+        <div id="h" class="accordeon">
+            <h2 class="lettre" tabindex="0" role="button">H</h2>
+            <div class="corps ferme" aria-expanded="false">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en H.</p>
+            </div>
+        </div>
+        <div id="i" class="accordeon">
+            <h2 class="lettre" tabindex="0" role="button">I</h2>
+            <div class="corps ferme" aria-expanded="false">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en I.</p>
+            </div>
+        </div>
+
+        <div id="j" class="accordeon">
+            <h2 class="lettre" tabindex="0" role="button">J</h2>
+            <div class="corps ferme" aria-expanded="false">
+
+                <p>Justify-content est la seule propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 commençant
+                    par la lettre J.</p>
+            </div>
+        </div>
+
+        <div id="k" class="accordeon">
+            <h2 class="lettre" tabindex="0" role="button">K</h2>
+            <div class="corps ferme" aria-expanded="false">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en K.</p>
+            </div>
+        </div>
+
+        <div id="l" class="accordeon">
+            <h2 class="lettre" tabindex="0" role="button">L</h2>
+            <div class="corps ferme" aria-expanded="false">
+                <h3>Linear-gradient</h3>
+                <p>Porpriété qui permet de faire un dégradé linéaire sur un élément. Il est possible de mettre plus de
+                    deux couleuirs.</p>
+                <p class="rectangle-lineargradient">Exemple</p>
+
+
+                <pre class="trop-long">
+.rectangle-lineargradient {
+    background: linear-gradient(to bottom, rgb(88, 128, 87), gold);
+}
+                </pre>
+
+
+            </div>
+        </div>
+        <div id="m" class="accordeon">
+            <h2 class="lettre">M</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en M.</p>
+            </div>
+        </div>
+        <div id="n" class="accordeon">
+            <h2 class="lettre">N</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en N.</p>
+            </div>
+        </div>
+        <div id="o" class="accordeon">
+            <h2 class="lettre">O</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <h3>Opacity</h3>
+                <p>La propriété opacity permet de changer l'opacité d'un élément.</p>
+                <div class="rectangle-opacity">Exemple</div>
+
+            <pre>
+.rectangle-opacity{
+    opacity: 50%;
+}
+            </pre>
+
+                <p>Autres propriétés <abbr title="Cascading Style Sheets">CSS</abbr>3 commençant par </p>
+                <ul>
+                    <li>overflow-x</li>
+                    <li>overflow-y</li>
+                </ul>
+            </div>
+        </div>
+        <div id="p" class="accordeon">
+            <h2 class="lettre">P</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <p>perspective et persepective-origin sont les 2 propriétés <abbr
+                        title="Cascading Style Sheets">CSS</abbr>3 commençant par la lettre P.</p>
+            </div>
+        </div>
+        <div id="q" class="accordeon">
+            <h2 class="lettre">Q</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en Q.</p>
+            </div>
+        </div>
+        <div id="r" class="accordeon">
+            <h2 class="lettre">R</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <p>Resize est la seule propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 commençant par la
+                    lettre R.</p>
+            </div>
+        </div>
+        <div id="s" class="accordeon">
+            <h2 class="lettre">S</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en S.</p>
+
+            </div>
+        </div>
+        <div id="t" class="accordeon">
+            <h2 class="lettre">T</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <h3>Text-decoration-line</h3>
+                <p>Propriété qui permet de d'ajouter une ligne décorative selon
+                    les valeurs suivante: underline, overline, line-through et
+                    blink</p>
+                <ul>
+                    <li>blink</li>
+                    <li>line-through</li>
+                    <li>overline</li>
+                    <li>underline</li>
+                </ul>
+                <p class="rectangle-line">Exemple</p>
+
+                <pre>
+.rectangle-line {
+    text-decoration-line: overline;
+}
+                </pre>
+
+
+                <h3>Text-shadow</h3>
+                <p>La propriété text-shadow permet d'ajouter de l'ombre à un texte. Les valeurs qui peuvent être utilisé
+                    sont les même que pour box-shadow</p>
+                <p class="text-shadow">Exemple</p>
+
+                <pre>
+.text-shadow {
+    text-shadow: rgb(6, 230, 43) 1px 0 10px;
+    font-size: 2rem;
+}
+                </pre>
+
+                <h3>Tranform</h3>
+                <p>La propriété transform permet de faire pivoter, de
+                    changer l'échelle (taille), de déplacer et d'incliner sur élément 2D ou 3D. Il est possible
+                    d'utiliser plusieurs valeurs pour un seul et même élément. </p>
+                <ul>
+                    <li>matrix</li>
+                    <li>matrix3d</li>
+
+                    <li>translate</li>
+                    <li>translateX</li>
+                    <li>translateY</li>
+                    <li>translateZ</li>
+                    <li>translate3d</li>
+
+                    <li>scale</li>
+                    <li>scaleX</li>
+                    <li>scaleY</li>
+                    <li>scaleZ</li>
+                    <li>scale3d</li>
+
+                    <li>skew</li>
+                    <li>skewX</li>
+
+                    <li>rotate</li>
+                    <li>rotateX</li>
+                    <li>rotateY</li>
+                    <li>rotateZ</li>
+                    <li>rotate3d</li>
+
+                    <li>perspective</li>
+                </ul>
+
+                <p>Parmi les formes géométriques suivantes, le parallélogramme (skew) et le diamant (rotate) ont été
+                    créés avec la propriété transform. Les autres formes ont été créées avec des borders (lelft, right
+                    et bottom). </p>
+                <div class="flexwrap">
+
+                    <div class="parallelogram">
+                    </div>
+
+                    <div class="diamant">
+                    </div>
+
+                    <div class="triangle">
+                    </div>
+
+                    <div class="triangle-rectangle">
+                    </div>
+
+                    <div class="trapeze">
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <pre>
+.parallelogram {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(165, 199, 85);
+    transform: skew(20deg);
+    margin: 20px;
+    
+}               
+</pre>
+                    <pre>
+.diamant {
+    width: 75px;
+    height: 75px;
+    background-color: rgb(165, 199, 85);
+    transform: rotate(45deg);
+    transform-origin: 24% 96%;
+    margin-right: 30px;
+}                   
+</pre>
+                    <pre>
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 80px solid rgb(165, 199, 85);
+}                
+</pre>
+                    <pre>
+.triangle-rectangle{
+    width: 0;
+    height: 0;
+    border-bottom: 75px solid rgb(165, 199, 85);
+    border-right: 75px solid transparent;
+}             
+</pre>
+                </div>
+                <pre class="trop-long">
+.trapeze {
+    border-bottom: 50px solid rgb(165, 199, 85);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 50px;
+    margin-top: 50px;
+}
+            
+</pre>
+
+                <h3>Text overflow</h3>
+
+                <p>Propriété qui permet de définir comment le contenu textuel
+                    trop long d'une boîte va être vu par les utilisateurs. Lorsqu'on
+                    applique un overflow hidden, il est possible de définir comment
+                    apparaîtra les dernières lettres visibles. </p>
+                <ul>
+                    <li>clip</li>
+                    <li>ellipsis</li>
+                </ul>
+
+                <p>Il est également possible de rajouter entre guillemets (&quot; 		&quot;) les caractères qu'on désire afficher
+                    avant la coupure du texte.</p>
+
+                <div class="flex">
+                    <div class="rectangle-overflow">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quasi.</p>
+                    </div>
+
+                    <div class="rectangle-overflow-2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quasi.</p>
+                    </div>
+
+                </div>
+                <div class="flex">
+                    <pre>
+.rectangle-line {
+    text-decoration-line: overline;
+}
+                    </pre>
+                    <pre>
+.rectangle-line {
+    text-decoration-line: overline;
+}
+                    </pre>
+                </div>
+
+
+                <h3>Transition</h3>
+                <p>Propriété qui est en fait le raccourci pour les propriétés :</p>
+                <ul>
+                    <li>transition-proprety</li>
+                    <li>transition-duration</li>
+                    <li>transition-timing-function</li>
+                    <li>transition-delay</li>
+                </ul>
+
+                <p>Elle permet de définir la transition entre deux états d’un élément. </p>
+                <div class="rectangle-transition">
+                    Survole-moi
+                </div>
+                <pre>
+.rectangle-transition:hover {
+    color: white;
+    background-color: rgb(5, 51, 11);
+    transition: 1s ease-in-out;
+    }
+                 </pre>
+                <p>Autres propriétés <abbr title="Cascading Style Sheets">CSS</abbr>3 commençant par T:</p>
+                <ul>
+                    <li>tab-size</li>
+                    <li>text-align-last</li>
+                    <li>text-decoration-color</li>
+                    <li>text-decoration-color</li>
+                    <li>transform-origin</li>
+                    <li>transform-style</li>
+                    <li>transition-timing-function</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="u" class="accordeon">
+            <h2 class="lettre">U</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en U.</p>
+            </div>
+        </div>
+        <div id="v" class="accordeon">
+            <h2 class="lettre">V</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en V.</p>
+            </div>
+        </div>
+        <div id="w" class="accordeon">
+            <h2 class="lettre">W</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <h3>Writing mode</h3>
+                <p>Propriété qui permet de définir si les lignes d'un texte sont affiché veticalement ou
+                    horizontalement. Cela définit également la direction du flux du bloc.</p>
+
+                <ul>
+                    <li>horizontal-tb</li>
+                    <li>vertical-rl</li>
+                    <li>vertical-lr</li>
+                </ul>
+
+                <p class="rectangle-writing-mode">Exemple</p>
+                <pre>
+.rectangle-writing-mode {
+    writing-mode: vertical-lr;
+}
+                 </pre>
+
+                <p>Autres propriétés <abbr title="Cascading Style Sheets">CSS</abbr>3 commençant par W:</p>
+                <ul>
+                    <li>word-break</li>
+                    <li>word-wrap</li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="x" class="accordeon">
+            <h2 class="lettre">X</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en X.</p>
+            </div>
+        </div>
+        <div id="y" class="accordeon">
+            <h2 class="lettre">Y</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en Y.</p>
+            </div>
+        </div>
+        <div id="z" class="accordeon">
+            <h2 class="lettre">Z</h2>
+            <div class="corps ferme" aria-expanded="false" role="button">
+                <p>Aucune nouvelle propriété <abbr title="Cascading Style Sheets">CSS</abbr>3 en Z.</p>
+            </div>
+        </div>
+
+        <button id="bouton"><a href="#accueil"><img src="./img/up-arrow.png" height="25"
+                    alt="Flèche vers le haut"></a></button>
+    </main>
+    <footer>
+        
+        <p>Gabriel Leblanc - <abbr title="Production en médias interactifs">PMI</abbr> 2021</p>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+
+</html>

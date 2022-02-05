@@ -1,0 +1,429 @@
+body {
+  background-color: #d3d3d3;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header {
+  background-color: rgb(47, 71, 55);
+  color: white;
+  grid-column: 1/4;
+  text-align: center;
+  grid-row: 1/2;
+}
+
+nav {
+  margin: auto;
+  top: 0;
+  width: 100%;
+  grid-column: 1/4;
+  padding: 0 30px;
+  box-sizing: border-box;
+  background-color: rgb(47, 71, 55);
+}
+
+nav > ul > li {
+  list-style-type: none;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding: 0;
+  color: white;
+}
+
+main {
+  grid-row: 3/4;
+  grid-column: 1/4;
+  display: flex;
+  justify-content: space-around;
+  margin: 2.5rem;
+  flex-wrap: wrap;
+  padding-top: 60px;
+}
+
+li > a {
+  background-color: rgba(165, 199, 85, 0.397);
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  padding: 2rem;
+  font-family: "Rozha One", serif;
+}
+
+h1 > a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 5rem;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-family: "Rozha One", serif;
+}
+
+h2:hover {
+  color: white;
+}
+
+h3 {
+  padding-top: 20px;
+}
+
+footer {
+  color: white;
+  background-color: rgb(47, 71, 55);
+  height: 50px;
+  grid-column: 1/4;
+  grid-row: 4/4;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.deskop {
+  display: none;
+}
+
+.accordeon {
+  background-color: #fff;
+  width: 400px;
+  margin-bottom: 40px;
+  min-height: 274px;
+  box-shadow: 0px 7px 16px 1px rgba(0, 0, 0, 0.25);
+}
+
+.accordeon:hover {
+  background-color: rgb(94, 119, 102);
+}
+
+div .corps {
+  padding: 2rem;
+  /* display:  none; */
+}
+
+.ferme {
+    display: none;
+}
+
+
+abbr {
+  text-decoration: none;
+}
+
+#bouton {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.overflow {
+  overflow-x: scroll;
+}
+
+/* LES EXEMPLES */
+
+.flex > pre {
+  width: 40%;
+}
+
+.trop-long {
+  width: 90%;
+}
+
+pre {
+  background-color: rgba(199, 199, 199, 0.5);
+  padding: 20px;
+  border-radius: 20px;
+  width: max-content;
+  font-size: 11px;
+  margin: 10px;
+  overflow-y: auto;
+}
+
+/*  B */
+
+.rectangle-border-exemple {
+  border-radius: 5px;
+}
+
+.cercle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgb(165, 199, 85);
+  margin: 0 50px;
+}
+
+.rectangle-box-shadow {
+  box-shadow: 5px 10px 5px #000000;
+  margin-bottom: 20px;
+}
+
+[class^="background"] {
+  /* padding: 10px; */
+  margin: 20px;
+  height: 100px;
+  width: 150px;
+  background-color: rgb(165, 199, 85);
+  border: 8px dashed black;
+  padding: 10px;
+}
+
+.background-clip-padding {
+  background-clip: padding-box;
+}
+
+.background-clip-content {
+  background-clip: content-box;
+}
+
+.background-border-img {
+  height: 100px;
+  width: 100px;
+  padding: 15px;
+  border: 30px solid black;
+  border-image-source: url(./img/Pngtreecreative\ vector\ dotted\ line\ dotted_6030768.png);
+  border-image-slice: 40%;
+  border-image-repeat: repeat;
+}
+
+[class^="box"] {
+  padding: 10px;
+  margin: 20px;
+  height: 100px;
+  width: 150px;
+  background-color: rgb(165, 199, 85);
+  border: 2px dashed black;
+}
+
+.box-sizing {
+  box-sizing: content-box;
+}
+
+.box-sizing-2 {
+  box-sizing: border-box;
+}
+
+/* C */
+
+.p-column {
+  column-count: 2;
+  background-color: rgb(165, 199, 85);
+  padding: 20px;
+}
+
+input {
+  caret-color: rgb(228, 7, 7);
+  height: 25px;
+  background-color: rgb(165, 199, 85);
+}
+
+/* F */
+
+[class^="chat"] {
+  padding: 20px;
+}
+.chat-f1 {
+  filter: grayscale(100%);
+}
+
+.chat-f2 {
+  filter: invert(100%);
+}
+
+.chat-f3 {
+  filter: brightness(50%);
+}
+
+figure {
+  background-color: rgb(165, 199, 85);
+  width: 150px;
+  margin: 5px;
+}
+
+figcaption {
+  text-align: center;
+  width: 150px;
+  padding-bottom: 10px;
+  font-size: 11px;
+}
+
+/* L */
+
+.rectangle-lineargradient {
+  background: linear-gradient(to bottom, rgb(88, 128, 87), gold);
+}
+
+/* O */
+
+.rectangle-opacity {
+  opacity: 50%;
+}
+
+/* T */
+
+[class^="rectangle"] {
+  width: 100px;
+  height: 50px;
+  background-color: rgb(165, 199, 85);
+  padding: 10px;
+}
+
+.rectangle-line {
+  text-decoration-line: overline;
+}
+
+.text-shadow {
+  text-shadow: rgb(6, 230, 43) 1px 0 10px;
+  font-size: 2rem;
+}
+
+.flexwrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.parallelogram {
+  width: 100px;
+  height: 50px;
+  background-color: rgb(165, 199, 85);
+  transform: skew(20deg);
+  margin: 20px;
+}
+
+.diamant {
+  width: 75px;
+  height: 75px;
+  background-color: rgb(165, 199, 85);
+  transform: rotate(45deg);
+  transform-origin: 24% 96%;
+  margin-right: 30px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 80px solid rgb(165, 199, 85);
+}
+
+.triangle-rectangle {
+  width: 0;
+  height: 0;
+  border-bottom: 75px solid rgb(165, 199, 85);
+  border-right: 75px solid transparent;
+}
+
+.trapeze {
+  border-bottom: 50px solid rgb(165, 199, 85);
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 50px;
+  margin-top: 50px;
+}
+
+.rectangle-overflow {
+  margin: 0 30px;
+}
+
+.rectangle-overflow p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.rectangle-overflow-2 p {
+  text-overflow: "----";
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.rectangle-transition:hover {
+  color: white;
+  background-color: rgb(5, 51, 11);
+  transition: 1s ease-in-out;
+}
+
+/* w */
+
+.rectangle-writing-mode {
+  writing-mode: vertical-lr;
+}
+
+button {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 7%;
+  right: 0.5%;
+  background-color: rgb(47, 71, 55);
+  color: white;
+  border: none;
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: rgb(165, 199, 85);
+  color: black;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+@media screen and (min-width: 650px) {
+  .accordeon {
+    width: 500px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  nav > ul {
+    margin: 0 30px;
+    padding: 20px;
+  }
+
+  li > a {
+    background-color: rgba(47, 71, 55, 0);
+    font-size: 30px;
+    font-family: "Rozha One", serif;
+  }
+}
